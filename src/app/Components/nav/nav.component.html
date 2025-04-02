@@ -1,0 +1,8 @@
+<nav class="navbar">
+    <div class="nav-links">
+        <a (click)="navigateTo('profile')" [class.active]="activeLink === 'profile'">Profile</a>
+        <a (click)="navigateTo('users')" [class.active]="activeLink === 'users'">Users</a>
+        <a (click)="navigateTo('products')" [class.active]="activeLink === 'products'">Products</a>
+    </div>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+</nav>

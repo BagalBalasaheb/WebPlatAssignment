@@ -1,0 +1,144 @@
+// .main {
+//     height: 100vh;
+//     width: 100vw;
+//     overflow: hidden;
+//     display: flex;
+//     justify-content: baseline;
+//     align-items: center;
+// }
+
+// .container {
+//     background: white;
+//     padding: 20px;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//     text-align: center;
+//     width: 300px;
+//     margin: auto;
+// }
+
+// .profile-img {
+//     width: 80px;
+//     height: 80px;
+//     border-radius: 50%;
+//     overflow: hidden;
+//     margin: 10px auto;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #eee;
+// }
+
+// .profile-img img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     border-radius: 50%;
+// }
+
+// .login-title {
+//     font-size: 24px;
+//     margin-bottom: 20px;
+// }
+
+// input {
+//     width: 100%;
+//     padding: 10px;
+//     margin: 10px 0;
+//     border: 1px solid #ddd;
+//     border-radius: 5px;
+//     font-size: 16px;
+// }
+
+// button {
+//     background: #007bff;
+//     color: white;
+//     padding: 10px;
+//     border: none;
+//     width: 100%;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     font-size: 16px;
+// }
+
+// button:disabled {
+//     background: #ccc;
+// }
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #f4f4f4; 
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px; 
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; // 🎨 Darker text for better readability
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 15px; // ✅ Adds spacing between inputs
+}
+
+input {
+    width: 100%; // ✅ Ensures it never exceeds the container width
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; // ✅ Fixes spacing issues
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out; // 🔥 Smooth hover effect
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
