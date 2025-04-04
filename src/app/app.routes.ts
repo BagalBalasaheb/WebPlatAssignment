@@ -11,11 +11,36 @@ export const routes: Routes = [
     {
         path: 'dashboard', 
         component: LayoutComponent,
+        canActivate: [authGuard],
         children: [
-            { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
-            { path: 'users', component: UsersComponent, canActivate: [authGuard]},
-            { path: 'products', component: ProductsComponent, canActivate: [authGuard]},
+            { 
+                path: 'profile', 
+                loadComponent: () => import('./Components/profile/profile.component').then(m => m.ProfileComponent) 
+            },
+            { 
+                path: 'users', 
+                loadComponent: () => import('./Components/users/users.component').then(m => m.UsersComponent) 
+            },
+            { 
+                path: 'products', 
+                loadComponent: () => import('./Components/products/products.component').then(m => m.ProductsComponent) 
+            },
         ],
     },
-    { path: '**', redirectTo: '' } 
+    { path: '**', redirectTo: '' }  
 ];
+
+
+// [
+//     { path: '', component: LoginComponent, pathMatch: 'full' }, 
+//     {
+//         path: 'dashboard', 
+//         component: LayoutComponent,
+//         children: [
+//             { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
+//             { path: 'users', component: UsersComponent, canActivate: [authGuard]},
+//             { path: 'products', component: ProductsComponent, canActivate: [authGuard]},
+//         ],
+//     },
+//     { path: '**', redirectTo: '' } 
+// ];

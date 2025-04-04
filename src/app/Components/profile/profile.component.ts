@@ -11,19 +11,20 @@ import { Router } from '@angular/router';
 export class ProfileComponent {
   profileData: any = null;
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getProfile().subscribe({
-      next: (data) => (this.profileData = data),
+      next: (data) => {
+        this.profileData = data;
+      },
       error: () => console.error('Failed to load profile'),
     });
 
-    console.log(this.profileData)
   }
 
   logout(): void {
     localStorage.removeItem('token');
-    this.router.navigate(['/']); 
+    this.router.navigate(['/']);
   }
 }

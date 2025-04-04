@@ -1,8 +1,17 @@
-<nav class="navbar">
+<!-- <nav class="navbar">
     <div class="nav-links">
         <a (click)="navigateTo('profile')" [class.active]="activeLink === 'profile'">Profile</a>
         <a (click)="navigateTo('users')" [class.active]="activeLink === 'users'">Users</a>
         <a (click)="navigateTo('products')" [class.active]="activeLink === 'products'">Products</a>
+    </div>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+</nav> -->
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a routerLink="/dashboard/profile" routerLinkActive="active">Profile</a>
+        <a routerLink="/dashboard/users" routerLinkActive="active">Users</a>
+        <a routerLink="/dashboard/products" routerLinkActive="active">Products</a>
     </div>
     <button class="logout-btn" (click)="logout()">Logout</button>
 </nav>
