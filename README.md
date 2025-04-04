@@ -1,5 +1,9 @@
 # AngularAssignment
 
+## Project Demo
+
+[![Watch the video](https://img.icons8.com/color/96/000000/youtube-play.png)](https://drive.google.com/file/d/1BPLBOcjJIgzSod0KSde7sAPXChtQLoQm/view?usp=sharing)
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
 ## Development server
