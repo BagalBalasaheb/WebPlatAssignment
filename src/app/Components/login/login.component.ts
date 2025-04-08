@@ -27,8 +27,8 @@ export class LoginComponent {
     if (this.form.valid) {
       this.authService.login(this.form.value).subscribe({
         next: (response) => {
-          localStorage.setItem('token', response.accessToken); 
-          this.router.navigate(['/dashboard/profile']); 
+          localStorage.setItem('token', response.accessToken);
+          this.router.navigate(['/dashboard/profile']);
         },
         error: () => {
           alert('Invalid credentials');
